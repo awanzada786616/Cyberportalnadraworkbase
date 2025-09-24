@@ -1,4 +1,12 @@
+<?php
+session_start();
 
+// agar login nahi hai to wapis login page bhej do
+if (empty($_SESSION['logged_in'])) {
+    header("Location: index.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
